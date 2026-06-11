@@ -1,0 +1,18 @@
+name = "quoridor-coordinator"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+# Create with: wrangler kv namespace create QKV
+# then paste the id below.
+[[kv_namespaces]]
+binding = "QKV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Secrets (set via `wrangler secret put NAME`):
+#   WEBHOOK_SECRET   — GitHub webhook HMAC secret
+#   OWNER_TOKEN      — bearer token for owner endpoints (/api/mode, /api/spend-cap)
+#   HETZNER_TOKEN    — optional, only used in BALANCE/SPEED modes
+
+[vars]
+ENGINE_REPO = "https://github.com/titaniummachine1/titanium-quoridor"
+MAIN_BRANCH = "main"
