@@ -1,4 +1,21 @@
 node_modules/
 .wrangler/
 .dev.vars
+.dev.vars.*
 *.log
+
+# Secrets & credentials (never commit)
+.env
+.env.*
+!.env.example
+secrets.json
+.secrets/
+credentials.json
+*credentials*.json
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa
+id_rsa.*
+*.kdbx
