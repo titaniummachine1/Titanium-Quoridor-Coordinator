@@ -5,7 +5,7 @@ Repo: [github.com/titaniummachine1/Titanium-Quoridor-Coordinator](https://github
 Cloudflare Worker that coordinates distributed SPRT testing of the Titanium
 Quoridor engine (Fishtest-style, hobby scale).
 
-Licensed under **AGPL-3.0-or-later** (see `LICENSE`). Worker secrets
+Licensed under **GPL-3.0-or-later** (see `LICENSE`). Worker secrets
 (`WEBHOOK_SECRET`, `OWNER_TOKEN`) are set via `wrangler secret put` — never
 committed to git (see `.gitignore`).
 
