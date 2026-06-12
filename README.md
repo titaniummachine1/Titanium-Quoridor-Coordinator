@@ -22,15 +22,15 @@ secret = `WEBHOOK_SECRET`, event = push.
 
 ## API
 
-| Method | Path | Who | Purpose |
-|---|---|---|---|
-| POST | `/webhook` | GitHub | push event → debounce + queue SPRT batches |
-| GET | `/api/job?worker=ID` | test-client | claim a job |
-| POST | `/api/result` | test-client | submit `{job_id, wins, losses, draws}` |
-| GET | `/api/status` | anyone | mode, queue depth, monthly spend |
-| GET | `/api/result/<sha>` | website | published verdict JSON |
-| POST | `/api/mode` | owner | `{"mode":"FRUGAL"}` (Bearer OWNER_TOKEN) |
-| POST | `/api/spend-cap` | owner | `{"eur":15}` (absolute ceiling €50 in code) |
+| Method | Path                 | Who         | Purpose                                     |
+| ------ | -------------------- | ----------- | ------------------------------------------- |
+| POST   | `/webhook`           | GitHub      | push event → debounce + queue SPRT batches  |
+| GET    | `/api/job?worker=ID` | test-client | claim a job                                 |
+| POST   | `/api/result`        | test-client | submit `{job_id, wins, losses, draws}`      |
+| GET    | `/api/status`        | anyone      | mode, queue depth, monthly spend            |
+| GET    | `/api/result/<sha>`  | website     | published verdict JSON                      |
+| POST   | `/api/mode`          | owner       | `{"mode":"FRUGAL"}` (Bearer OWNER_TOKEN)    |
+| POST   | `/api/spend-cap`     | owner       | `{"eur":15}` (absolute ceiling €50 in code) |
 
 ## Modes
 
